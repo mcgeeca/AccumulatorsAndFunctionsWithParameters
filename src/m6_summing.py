@@ -4,9 +4,9 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
-
+         their colleagues and Craig McGee Jr.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -28,6 +28,22 @@ def run_test_sum_cosines():
     print('--------------------------------------------------')
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
+    # Test 1
+    expected = 19
+    answer = sum_cosines(3)
+    print("Test 1 expected:", expected)
+    print("       actual:", answer)
+    # Test 2
+    expected = 9
+    answer = sum_cosines(10)
+    print("Test 2 expected:", expected)
+    print("       actual:", answer)
+
+    # Test 3
+    expected = 26
+    answer = sum_cosines(15)
+    print("Test 3 expected:", expected)
+    print("       actual:", answer)
 
 
 def sum_cosines(n):
@@ -48,6 +64,10 @@ def sum_cosines(n):
     #   No fair running the code of  sum_cosines  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
+    total = 0
+    for k in range(n):
+        total = total + math.cos(k+1)
+        return total
 
 
 def run_test_sum_square_roots():
