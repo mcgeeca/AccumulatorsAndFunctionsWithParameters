@@ -18,6 +18,7 @@ def main():
     print_sequence1()
     draw_circles1()
     print_sequence2()
+    draw_circles2()
     print_sequence3()
     draw_circles3()
     print_cosines()
@@ -104,7 +105,7 @@ def draw_circles2():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -116,12 +117,11 @@ def draw_circles2():
     center = rg.Point(50, 100)
     for k in range(18):
         circle = rg.Circle(center, 10)
-        new_center = rg.Point(center.x + 20, 100)
-
-        circle.fill_color("blue")
+        print(center)
+        center = rg.Point(center.x +20, 100)
+        circle.fill_color = "blue"
         circle.attach_to(window)
         window.render(0.05)
-        print(center)
     window.close_on_mouse_click()
 
 def print_sequence3():
@@ -232,7 +232,8 @@ def draw_cosines_and_sines():
     print('--------------------------------------------------')
     print('Running draw_cosines_and_sines:  See graphics window')
     print('--------------------------------------------------')
-
+    window = rg.RoseWindow()
+    center = rg.Point()
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
